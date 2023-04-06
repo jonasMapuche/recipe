@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Рэсипэ</string>
+    <string name="text_element_ion_1">Эпэмэнтэ Ион 1</string>
+    <string name="text_element_ion_2">Эпэмэнтэ Ион 2</string>
+    <string name="text_element_cov_1">Эпэмэнтэ Сщвапэнтэ 1</string>
+    <string name="text_element_cov_2">Эпэмэнтэ Сщвапэнтэ 2</string>
+    <string name="text_element_metal_1">Эпэмэнтэ Мэтап 1</string>
+    <string name="text_element_metal_2">Эпэмэнтэ Мэтап 2</string>
+    <string name="text_level_ion_1">Пэвэп Ион 1</string>
+    <string name="text_level_ion_2">Пэвэп Ион 2</string>
+    <string name="text_level_cov_1">Пэвэп Сщвапэнтэ 1</string>
+    <string name="text_level_cov_2">Пэвэп Сщвапэнтэ 2</string>
+    <string name="text_level_metal_1">Пэвэп Мэтап 1</string>
+    <string name="text_level_metal_2">Пэвэп Мэтап 2</string>
+    <string name="text_element">Эпэмэнтэ</string>
+    <string name="text_level">Пэвэп</string>
+    <string name="text_setting">"Сэттинг"</string>
+    <string name="text_bot">Бот</string>
+    <string name="text_home">Иомэ</string>
+    <string name="text_send">Сэнд</string>
+    <string name="text_input">Инлут</string>
+    <string name="text_box_send">Бос Сэнд</string>
+    <string name="text_box_input">Бос Инлут</string>
+    <string name="title_home">Рэсипэ</string>
+    <string name="title_bot">Бот Рэсипэ</string>
+    <string name="title_menu">Бот Рэсипэ</string>
+    <string name="text_blank_home">Hello blank home fragment</string>
+    <string name="text_blank_bot">Hello blank bot fragment</string>
+    <string name="text_blank_setting">Hello blank setting fragment</string>
+    <string name="text_input_hint">Informe a fórmula</string>
+</resources>

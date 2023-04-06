@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="br.com.stomach.recipe.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_setting"
+            app:destination="@id/fragment_setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_bot"
+        android:name="br.com.stomach.recipe.bot.BotFragment"
+        tools:layout="@layout/fragment_bot" >
+        <action
+            android:id="@+id/action_fragment_bot_to_fragment_setting"
+            app:destination="@id/fragment_setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_setting"
+        android:name="br.com.stomach.recipe.helper.SettingFragment"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_fragment_setting_self"
+            app:destination="@id/fragment_setting" />
+    </fragment>
+
+</navigation>

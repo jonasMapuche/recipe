@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_fragment_bot_to_fragment_setting"
             app:destination="@id/fragment_setting" />
+        <action
+            android:id="@+id/action_fragment_bot_to_fragment_home"
+            app:destination="@id/fragment_home" />
     </fragment>
     <fragment
         android:id="@+id/fragment_setting"

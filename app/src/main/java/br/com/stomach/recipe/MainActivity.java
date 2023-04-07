@@ -1,23 +1,19 @@
 package br.com.stomach.recipe;
 
-import androidx.appcompat.app.ActionBar;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 import br.com.stomach.recipe.databinding.ActivityMainBinding;
 
@@ -25,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private AppBarConfiguration appBarConfiguration;
+
+    private boolean bolBot = false;
+    private boolean bolFloating = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +41,20 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         setListeners();
+
     }
 
     public boolean onSupportNavigateUp() {
-        binding.includeMain.floatingPlus.show();
+        if (bolBot == true && bolFloating == false) {
+            binding.includeMain.floatingPlus.show();
+            bolFloating = false;
+            bolBot = false;
+        } else if (bolFloating == true && bolBot == false) {
+            binding.includeMain.floatingPlus.show();
+            bolFloating = false;
+            bolBot = false;
+        }
+
         NavController navController = Navigation.findNavController(this, R.id.fragment_navigation);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
@@ -73,14 +82,15 @@ public class MainActivity extends AppCompatActivity {
                 (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation);
         try {
             NavHostFragment.findNavController(navHostFragment).navigate(R.id.action_fragment_home_to_fragment_setting);
-        } catch (Exception e) {
+        } catch (Exception err) {
             try {
                 NavHostFragment.findNavController(navHostFragment).navigate(R.id.action_fragment_bot_to_fragment_setting);
-            } catch (Exception s) {
+            } catch (Exception err2) {
                 System.out.println("Something went wrong in myself.");
             }
         }
         binding.includeMain.floatingPlus.hide();
+        bolBot = true;
     }
 
     public void setListeners() {
@@ -88,12 +98,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickFloatingPlus() {
-
         NavHostFragment navHostFragment =
                 (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation);
         NavHostFragment.findNavController(navHostFragment).navigate(R.id.action_fragment_home_to_fragment_bot);
         binding.includeMain.floatingPlus.hide();
-
+        bolFloating = true;
     }
 
 }

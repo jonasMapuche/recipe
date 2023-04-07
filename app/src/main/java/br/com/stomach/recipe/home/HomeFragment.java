@@ -1,14 +1,12 @@
 package br.com.stomach.recipe.home;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import br.com.stomach.recipe.MainActivity;
+import androidx.fragment.app.Fragment;
+
 import br.com.stomach.recipe.R;
 
 public class HomeFragment extends Fragment {

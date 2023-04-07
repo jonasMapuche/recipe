@@ -10,9 +10,5 @@
             android:id="@+id/fragment_home"
             android:icon="@drawable/ic_home"
             android:title="@string/title_home" />
-        <item
-            android:id="@+id/fragment_bot"
-            android:icon="@drawable/ic_icon"
-            android:title="@string/title_bot" />
     </group>
 </menu>

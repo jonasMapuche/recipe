@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import br.com.stomach.recipe.MainActivity;
 import br.com.stomach.recipe.R;
 
 public class HomeFragment extends Fragment {

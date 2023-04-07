@@ -1,5 +1,6 @@
 package br.com.stomach.recipe;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -40,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        setListeners();
     }
 
     public boolean onSupportNavigateUp() {
+        binding.includeMain.floatingPlus.show();
         NavController navController = Navigation.findNavController(this, R.id.fragment_navigation);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
@@ -77,6 +80,19 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("Something went wrong in myself.");
             }
         }
+        binding.includeMain.floatingPlus.hide();
+    }
+
+    public void setListeners() {
+        binding.includeMain.floatingPlus.setOnClickListener(v -> clickFloatingPlus());
+    }
+
+    public void clickFloatingPlus() {
+
+        NavHostFragment navHostFragment =
+                (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation);
+        NavHostFragment.findNavController(navHostFragment).navigate(R.id.action_fragment_home_to_fragment_bot);
+        binding.includeMain.floatingPlus.hide();
 
     }
 

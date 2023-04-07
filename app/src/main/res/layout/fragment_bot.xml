@@ -45,7 +45,7 @@
     <View
         android:id="@+id/view_top"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="550dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/ic_background_top"
         app:layout_constraintTop_toBottomOf="@+id/frame_icon" />
@@ -76,7 +76,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/ic_background_input"
         android:contentDescription="@string/text_box_input"
@@ -88,8 +88,8 @@
 
         <EditText
             android:id="@+id/edit_input"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/ic_background_input"
             android:hint="@string/text_input_hint"
             android:imeOptions="actionDone"
@@ -101,12 +101,5 @@
             android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
